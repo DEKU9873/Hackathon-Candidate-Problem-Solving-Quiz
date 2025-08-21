@@ -1,4 +1,4 @@
-const MissingFrame = (frames) => {
+const FindMissingRanges = (frames) => {
   let gaps = [];
   let missingCount = 0;
   let longestGap = [];
@@ -38,4 +38,4 @@ const MissingFrame = (frames) => {
 };
 
 let frames = [1, 11, 5, 3, 6, 10, 2, 16];
-console.log(MissingFrame(frames));
+console.log(FindMissingRanges(frames));
