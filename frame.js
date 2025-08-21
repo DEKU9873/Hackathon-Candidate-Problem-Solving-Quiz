@@ -1,8 +1,11 @@
 const FindMissingRanges = (frames) => {
+  // Variables 
   let gaps = [];
   let missingCount = 0;
   let longestGap = [];
   let maxGapLength = 0;
+
+  // Sort Array
   for (let i = 0; i < frames.length; i++) {
     for (let j = i + 1; j < frames.length; j++) {
       if (frames[j] < frames[i]) {
@@ -12,6 +15,8 @@ const FindMissingRanges = (frames) => {
       }
     }
   }
+
+  // Find Gaps and Missing Count and Longest Gap
   for (let i = 1; i < frames.length; i++) {
     let prev = frames[i - 1];
     let curr = frames[i];
@@ -30,6 +35,7 @@ const FindMissingRanges = (frames) => {
       }
     }
   }
+  // Return the results
   return {
     gaps: gaps,
     longest_gap: longestGap,
